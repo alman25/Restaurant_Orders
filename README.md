@@ -8,8 +8,11 @@
 - [Exploration Data Analysis](#exploration-data-analysis)
 - [Data Analysis](#data-analysis)
 - [Results](#results)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
 
 ### Project Overview
+---
 
 This data analysis project aims to provide insights into the sales performance of a restaurant over the first quarter in 2023. By analyzing various aspects of the sales
 data, we seek to identify trends, make data-driven recommendations and gain a deeper understanding of the restaurant's performance.
