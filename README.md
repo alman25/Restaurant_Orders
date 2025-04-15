@@ -5,9 +5,9 @@
 - [Project Overview](#project-overview)
 - [About this project](#about-this-project)
 - [Two relational tables were used for this project:](#two-relational-tables-were-used-for-this-project)
-- [1. Menu Items Analysis](#1.-menu-items-analysis)
-- [2. Order Analysis](#2.-Order-Analysis)
-- [3. Customer Behavior Analysis](#3.-Customer-Behavior-Analysis)
+- [1. Menu Items Analysis](#1-menu-items-analysis)
+- [2. Order Analysis](#2-Order-Analysis)
+- [3. Customer Behavior Analysis](#3-Customer-Behavior-Analysis)
 
 ### Project Overview
 ---
