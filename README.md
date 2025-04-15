@@ -37,7 +37,6 @@ The project is structured into three core analysis areas:
 - Assess how often large orders (12+ items) occur
 
 ### 3. Customer Behavior Analysis
-- Join menu and order data to create a unified transactional view
 - Determine the most and least ordered items and their categories
 - Rank the top 5 highest-spending orders
 - Explore detailed breakdowns of top-value orders
