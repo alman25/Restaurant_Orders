@@ -19,25 +19,25 @@ This project presents a comprehensive analysis of restaurant order data using My
 
 ### Two relational tables were used for this project:
 
-menu_items – contains item name, category, and price
-order_details – records all order transactions with date, time, and item references
+- menu_items – contains item name, category, and price
+- order_details – records all order transactions with date, time, and item references
 
 The project is structured into three core analysis areas:
 
 ### 1. Menu Items Analysis
-Determine the total number of items on the menu
-Identify the most and least expensive items
-Analyze pricing trends and item distribution by category
-Highlight Italian cuisine availability and pricing
+- Determine the total number of items on the menu
+- Identify the most and least expensive items
+- Highlight Italian cuisine availability and pricing
+- Analyze pricing trends and item distribution by category
 
 ### 2. Order Analysis
-Identify the active date range of order data
-Count total orders and total items sold
-Pinpoint orders with the highest item quantities
-Assess how often large orders (12+ items) occur
+- Identify the active date range of order data
+- Count total orders and total items sold
+- Pinpoint orders with the highest item quantities
+- Assess how often large orders (12+ items) occur
 
 ### 3. Customer Behavior Analysis
-Join menu and order data to create a unified transactional view
-Determine the most and least ordered items and their categories
-Rank the top 5 highest-spending orders
-Explore detailed breakdowns of top-value orders
+- Join menu and order data to create a unified transactional view
+- Determine the most and least ordered items and their categories
+- Rank the top 5 highest-spending orders
+- Explore detailed breakdowns of top-value orders
