@@ -3,99 +3,41 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Data Sources](#data-sources)
-- [Tools](#tools)
-- [Exploration Data Analysis](#exploration-data-analysis)
-- [Data Analysis](#data-analysis)
-- [Results](#results)
-- [Recommendations](#recommendations)
-- [Limitations](#limitations)
+- [About this project](#about-this-project)
+- [Two relational tables were used for this project:](#two-relational-tables-were-used-for-this-project)
+- [1. Menu Items Analysis](#1.-menu-items-analysis)
+- [2. Order Analysis](#2.-Order-Analysis)
+- [3. Customer Behavior Analysis](#3.-Customer-Behavior-Analysis)
 
 ### Project Overview
 ---
 
-This data analysis project aims to provide insights into the sales performance of a restaurant over the first quarter in 2023. By analyzing various aspects of the sales
-data, we seek to identify trends, make data-driven recommendations and gain a deeper understanding of the restaurant's performance.
+### About this project
+Uncovering Customer and Menu Insights Using SQL and Maven Analytics Data
 
-### Data Sources
+This project presents a comprehensive analysis of restaurant order data using MySQL. The focus is on delivering key insights related to menu pricing, ordering behavior, and customer preferences, showcasing advanced SQL skills through structured queries and data exploration techniques.
 
-The primary dataset used for this analysis is from "menu_items.csv" and "order_details.csv" files, containing detailed information about each item and sale
-made by the restaurant.
+### Two relational tables were used for this project:
 
-### Tools
+menu_items – contains item name, category, and price
+order_details – records all order transactions with date, time, and item references
 
-- SQL - Data Analysis
+The project is structured into three core analysis areas:
 
-### Exploration Data Analysis
+### 1. Menu Items Analysis
+Determine the total number of items on the menu
+Identify the most and least expensive items
+Analyze pricing trends and item distribution by category
+Highlight Italian cuisine availability and pricing
 
-EDA involved exploring the sales data to answer key questions, such as:
+### 2. Order Analysis
+Identify the active date range of order data
+Count total orders and total items sold
+Pinpoint orders with the highest item quantities
+Assess how often large orders (12+ items) occur
 
-- What are the least and most expensive dishes on the menu?
-- How many dishes are in each menu category and what is the average dish price within each category?
-- What are the least and most ordered items and what categories were they in?
-
-### Data Analysis
-
-What were the most ordered items? What categories were they in?
-```sql
-SELECT
-		item_name,
-        count(order_details_id) as num_items,
-        category
-FROM order_details
-	LEFT JOIN menu_items
-		ON order_details.item_id = menu_items.menu_item_id
-GROUP by item_name, category
-ORDER by num_items DESC
-LIMIT 1;
-```
-
-What were the top 5 orders that spent the most money?
-```sql
-SELECT 
-		order_id,
-		SUM(price) as spent
-FROM order_details
-	LEFT JOIN menu_items
-		ON order_details.item_id = menu_items.menu_item_id
-GROUP by order_id
-ORDER BY spent desc
-LIMIT 5;
-```
-
-View the details of the highest spend order. Which specific items were purchased?
-```sql
-SELECT 
-		category,
-        count(item_id) as num_items
-FROM order_details
-	LEFT JOIN menu_items
-		ON order_details.item_id = menu_items.menu_item_id
-WHERE order_id = 440
-GROUP by category
-ORDER by num_items desc;
-```
-
-View the details of the top 5 highest spend order.
-```sql
-SELECT 
-		order_id,
-        category,
-        count(item_id) as num_items
-FROM order_details
-	LEFT JOIN menu_items
-		ON order_details.item_id = menu_items.menu_item_id
-WHERE order_id IN (440, 2075, 1957, 330, 2675)
-GROUP by order_id, category;
-```
-
-### Results
-The most ordered item on the menu were hamburgers. However, when evaluating the the most expensive food orders, italian food was the most commonly spent item. 
-
-### Recommendations
-From this database, the highest spend orders were primarily on italian food. The high priced italian food should remain on the menu since people are ordering them a lot
-especially from the highest spent customers.
-
-### Limitations
-- This data covers only a 3 month timeframe
-- The trends could change if analyzed in a different season
+### 3. Customer Behavior Analysis
+Join menu and order data to create a unified transactional view
+Determine the most and least ordered items and their categories
+Rank the top 5 highest-spending orders
+Explore detailed breakdowns of top-value orders
